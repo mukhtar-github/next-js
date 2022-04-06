@@ -123,4 +123,31 @@ Applications usually include more content than a single component. You can nest 
 
 ### Component Trees
 
+You can keep nesting React components this way to form component trees.
+
 ![component-tree](https://nextjs.org/static/images/learn/foundations/component-tree.png)
+
+This modular format allows you to reuse components in different places inside your app. In your project, since 'HomePage' is now your top-level component, you can pass it to the ReactDOM.render() method.
+
+```html
+<script type="text/babel">
+    const app = document.getElementById('app')
+
+    function Header() {
+        return (
+            <h1>Develop. Preview. Ship. 🚀</h1>
+        )
+    }
+
+    function HomePage() {
+        return (
+            <div>
+                {/* Nesting the Header component */}
+                <Header />
+            </div>
+        )
+    }
+
+    ReactDOM.render(<HomePage />, app)
+</script>
+```
