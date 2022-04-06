@@ -95,3 +95,28 @@ In React, components are functions. A component is a function that returns UI el
 ```
 
 ### Nesting Components
+
+Applications usually include more content than a single component. You can nest React components inside each other like you would regular HTML elements. In your example, create a new component called 'HomePage.' Then nest the 'Header' component inside the new 'HomePage' component.
+
+```html
+<script type="text/babel">
+    const app = document.getElementById('app')
+
+    function Header() {
+        return (
+            <h1>Develop. Preview. Ship. 🚀</h1>
+        )
+    }
+
+    function HomePage() {
+        return (
+            <div>
+                {/* Nesting the Header component */}
+                <Header />
+            </div>
+        )
+    }
+
+    ReactDOM.render(<Header />, app)
+</script>
+```
