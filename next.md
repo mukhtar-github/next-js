@@ -49,3 +49,23 @@
   </body>
 </html>
 ```
+
+## Essential JavaScript for React
+
+In the next sections, you will be introduced to some core concepts of React from a JavaScript perspective. Here’s a summary of the JavaScript topics that will be mentioned:
+
+- Functions and Arrow Functions
+- Objects
+- Arrays and array methods
+- Destructuring
+- Template literals
+- Ternary Operators
+- ES Modules and Import / Export Syntax
+
+## React Core Concepts
+
+There are three core concepts of React that you'll need to be familiar with to start building React applications. These are:
+
+- Components
+- Props
+- State
