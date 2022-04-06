@@ -120,3 +120,7 @@ Applications usually include more content than a single component. You can nest 
     ReactDOM.render(<Header />, app)
 </script>
 ```
+
+### Component Trees
+
+![component-tree](https://nextjs.org/static/images/learn/foundations/component-tree.png)
