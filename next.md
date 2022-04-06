@@ -69,3 +69,13 @@ There are three core concepts of React that you'll need to be familiar with to s
 - Components
 - Props
 - State
+
+## Building UI with Components
+
+User interfaces can be broken down into smaller building blocks called components. This modularity allows your code to be more maintainable as it grows because you can easily add, update, and delete components without touching the rest of our application.
+
+The nice thing about React components is that they are just JavaScript. Let's see how you can write a React component, from a JavaScript perspective:
+
+### Creating components
+
+In React, components are functions.
