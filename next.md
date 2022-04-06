@@ -78,4 +78,4 @@ The nice thing about React components is that they are just JavaScript. Let's se
 
 ### Creating components
 
-In React, components are functions.
+In React, components are functions. A component is a function that returns UI elements. Inside the return statement of the function, you can write JSX.
