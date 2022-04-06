@@ -78,4 +78,20 @@ The nice thing about React components is that they are just JavaScript. Let's se
 
 ### Creating components
 
-In React, components are functions. A component is a function that returns UI elements. Inside the return statement of the function, you can write JSX.
+In React, components are functions. A component is a function that returns UI elements. Inside the return statement of the function, you can write JSX. React components should be capitalized to distinguish them from plain HTML and JavaScript, and you use React components the same way you’d use regular HTML tags, with angle brackets <>.
+
+```html
+<script type="text/babel">
+    const app = document.getElementById('app')
+
+    function Header() {
+        return (
+            <h1>Develop. Preview. Ship. 🚀</h1>
+        )
+    }
+
+    ReactDOM.render(<Header />, app)
+</script>
+```
+
+### Nesting Components
