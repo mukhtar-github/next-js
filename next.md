@@ -151,3 +151,26 @@ This modular format allows you to reuse components in different places inside yo
     ReactDOM.render(<HomePage />, app)
 </script>
 ```
+
+## Displaying Data with Props
+
+So far, if we were to reuse your 'Header' component, it would display the same content both times.
+
+```javascript
+function Header() {
+  return <h1>Develop. Preview. Ship. 🚀</h1>
+}
+
+function HomePage() {
+  return (
+    <div>
+      <Header />
+      <Header />
+    </div>
+  )
+}
+```
+
+But what if we want to pass different text or you don't know the information ahead of time because we’re fetching data from an external source? Regular HTML elements have attributes that you can use to pass pieces of information that change the behavior of those elements. For example, changing the *src* attribute of an 'img' element changes the image that is shown. Changing the *href* attribute of an 'anchor' tag changes the destination of the link.
+
+In the same way, you can pass pieces of information as properties to React components. These are called 'props'.
