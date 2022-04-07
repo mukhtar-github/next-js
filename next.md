@@ -332,3 +332,29 @@ function Header({ title }) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+#### The returned value of a function
+
+```javascript
+function createTitle(title) {
+  if (title) {
+    return title
+  } else {
+    return 'Default title'
+  }
+}
+
+function Header({ title }) {
+  return <h1>{createTitle(title)}</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
