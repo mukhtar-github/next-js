@@ -376,3 +376,22 @@ function Header({ title }) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+You can now pass any string to your title prop, and since you’ve accounted for the default case in your component with the ternary operator, you could even not pass a title prop at all:
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  return (
+    <div>
+        {/*<Header title="React 💙" />*/}
+        <Header />
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
