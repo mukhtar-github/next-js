@@ -548,3 +548,33 @@ ReactDOM.render(<HomePage />, app)
 ```
 
 #### Handling Events
+
+You can define a function to "handle" events whenever they are triggered. Create a function before the return statement called 'handleClick()':
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  const handleClick = () => {
+      console.log("increment like count")
+  }
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+        <ul>
+            {names.map(name => (
+                <li key={name}>{name}</li>
+            ))}
+        </ul>
+        <button onClick={handleClick}>Like</button>
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
