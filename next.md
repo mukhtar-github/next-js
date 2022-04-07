@@ -490,3 +490,31 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+### Adding Interactivity with State
+
+Let's explore how React helps us add interactivity with 'state' and 'event-handlers'. As an example, let’s create a like button in our project. First, add a button element to your code:
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+        <ul>
+            {names.map(name => (
+                <li key={name}>{name}</li>
+            ))}
+        </ul>
+        <button>Like</button>
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
