@@ -271,3 +271,26 @@ function Header({ title }) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+If you open your project in the browser, you will see that it is displaying the actual word “title”. This is because React thinks you’re intending to render a plain text string to the DOM. You need a way to denote to React that this is a JavaScript variable.
+
+### Using Variables in JSX
+
+To use the variable you defined, you can use curly braces '{}', a special JSX syntax that allows you to write regular JavaScript directly inside your JSX markup.
+
+```javascript
+function Header({ title }) {
+  console.log(title)
+  return <h1>{title}</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
