@@ -173,4 +173,44 @@ function HomePage() {
 
 But what if we want to pass different text or you don't know the information ahead of time because we’re fetching data from an external source? Regular HTML elements have attributes that you can use to pass pieces of information that change the behavior of those elements. For example, changing the *src* attribute of an 'img' element changes the image that is shown. Changing the *href* attribute of an 'anchor' tag changes the destination of the link.
 
-In the same way, you can pass pieces of information as properties to React components. These are called 'props'.
+In the same way, you can pass pieces of information as properties to React components. These are called 'props'. Similar to a JavaScript function, you can design components that accept custom arguments (or props) that change the component’s behavior or what is visibly shown when it’s rendered to the screen. Then, you can pass down these props from parent components to child components.
+
+Note: In React, data flows down the component tree. This is referred to as one-way data flow. State, which will be discussed in the next section, can be passed from parent to child components as props.
+
+### Using props
+
+In your 'HomePage' component, you can pass a custom 'title' prop to the 'Header' component, just like you’d pass HTML attributes:
+
+```javascript
+// function Header() {
+//   return <h1>Develop. Preview. Ship. 🚀</h1>
+// }
+
+function HomePage() {
+  return (
+    <div>
+      <Header title="React 💙" />
+    </div>
+  )
+}
+
+// ReactDOM.render(<HomePage />, app)
+```
+
+And 'Header', the child component, can accept those props as its first function parameter:
+
+```javascript
+function Header(props) {
+//   return <h1>Develop. Preview. Ship. 🚀</h1>
+// }
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```

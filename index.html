@@ -10,17 +10,15 @@
     <script type="text/babel">
         const app = document.getElementById('app')
 
-        function Header() {
-            return (
-                <h1>Develop. Preview. Ship. 🚀</h1>
-            )
+        function Header(props) {
+            console.log(props) // { title: "React 💙" }
+            return <h1>React 💙</h1>
         }
 
         function HomePage() {
             return (
                 <div>
-                    {/* Nesting the Header component */}
-                    <Header />
+                    <Header title="React 💙" />
                 </div>
             )
         }
