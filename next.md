@@ -621,3 +621,9 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+Clicking the button will now call the 'handleClick' function, which calls the *'setLikes' state updater function with a single argument of the current number of likes + 1.*
+
+Note: Unlike *props* which are passed to components as the first function parameter, the *state* is initiated and stored within a component. You can pass the *state* information to children components as props, but the logic for updating the *state* should be kept within the component where *state* was initially created.
+
+> Props is read-only information that's passed to components. State is information that can change over time, usually triggered by user interaction.
