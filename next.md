@@ -518,3 +518,33 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+#### Listening to Events
+
+To make the button do something when clicked, you can make use of the 'onClick' event. In React, event names are camelCased. The 'onClick' event is one of many possible events you can use to respond to user interaction. For example, you can use 'onChange' for *input fields* or 'onSubmit' for *forms*.
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+        <ul>
+            {names.map(name => (
+                <li key={name}>{name}</li>
+            ))}
+        </ul>
+        <button onClick={}>Like</button>
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
+
+#### Handling Events
