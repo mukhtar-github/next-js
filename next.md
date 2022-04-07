@@ -294,3 +294,41 @@ function Header({ title }) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+You can think of curly braces as a way to enter "JavaScript land" while you are in "JSX land". You can add any JavaScript expression (something that evaluates to a single value) inside curly braces. For example:
+
+#### As we just discussed, an object property with dot notation:
+
+```javascript
+function Header(props) {
+  return <h1>{props.title}</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
+
+#### A template literal
+
+```javascript
+function Header({ title }) {
+  return <h1>{`Cool ${title}`}</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
