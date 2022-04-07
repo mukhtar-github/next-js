@@ -627,3 +627,7 @@ Clicking the button will now call the 'handleClick' function, which calls the *'
 Note: Unlike *props* which are passed to components as the first function parameter, the *state* is initiated and stored within a component. You can pass the *state* information to children components as props, but the logic for updating the *state* should be kept within the component where *state* was initially created.
 
 > Props is read-only information that's passed to components. State is information that can change over time, usually triggered by user interaction.
+
+### Getting Started with Next.js
+
+To add Next.js to your project, you can install these packages locally using the Node Package Manager 'npm'. To do so, create a new file called 'package.json' with an empty object '{}'.
