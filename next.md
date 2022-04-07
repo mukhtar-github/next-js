@@ -549,7 +549,7 @@ ReactDOM.render(<HomePage />, app)
 
 #### Handling Events
 
-You can define a function to "handle" events whenever they are triggered. Create a function before the return statement called 'handleClick()':
+You can define a function to "handle" events whenever they are triggered. Create a function before the return statement called 'handleClick()'. Then, you can call the handleClick function when the 'onClick' event is triggered:
 
 ```javascript
 function Header({ title }) {
@@ -578,3 +578,13 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+#### State and Hooks
+
+React has a set of functions called 'hooks'. Hooks allow you to add additional logic such as *state* to your components. You can think of *state* as any information in your UI that changes over time, usually triggered by user interaction.
+
+![state](https://nextjs.org/static/images/learn/foundations/state.png)
+
+You can *use state* to store and increment the number of times a user has clicked the *like button*. In fact, this is what the React hook to manage state is called: 'useState()'.
+
+'useState()' returns an array, and you can access and use those array values inside your component using *array destructuring*. The first item in the array is the *state* value, which you can name anything. It’s recommended to name it something descriptive. The second item in the array is a *function to update the value*. You can name the update function anything, but it's common to prefix it with *set* followed by the name of the state variable you’re updating.
