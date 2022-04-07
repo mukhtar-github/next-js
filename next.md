@@ -587,7 +587,11 @@ React has a set of functions called 'hooks'. Hooks allow you to add additional l
 
 You can *use state* to store and increment the number of times a user has clicked the *like button*. In fact, this is what the React hook to manage state is called: 'useState()'.
 
-'useState()' returns an array, and you can access and use those array values inside your component using *array destructuring*. The first item in the array is the *state* value, which you can name anything. It’s recommended to name it something descriptive. The second item in the array is a *function to update the value*. You can name the update function anything, but it's common to prefix it with *set* followed by the name of the state variable you’re updating. You can also take the opportunity to add the initial value of your 'likes' state: zero.
+'useState()' returns an array, and you can access and use those array values inside your component using *array destructuring*. The first item in the array is the *state* value, which you can name anything. It’s recommended to name it something descriptive. The second item in the array is a *function to update the value*.
+
+You can name the update function anything, but it's common to prefix it with *set* followed by the name of the state variable you’re updating. You can also take the opportunity to add the initial value of your 'likes' state: zero. Then, you can check the initial state is working by using the state variable inside your component.
+
+Finally, you can call your *state updater function, setLikes*, inside the 'handleClick()' function you previously defined:
 
 ```javascript
 function Header({ title }) {
@@ -599,7 +603,7 @@ function HomePage() {
   const [likes, setLikes] = React.useState(0)
 
   const handleClick = () => {
-      console.log("increment like count")
+      setLikes(likes + 1)
   }
 
   return (
