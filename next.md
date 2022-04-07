@@ -214,3 +214,60 @@ function Header(props) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+If you 'console.log()' props, you can see that it's an *object* with a *title* property.
+
+```javascript
+function Header(props) {
+    console.log(props) // { title: "React 💙" }
+//   return <h1>React 💙</h1>
+// }
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
+
+Since props is an object, you can use *object destructuring* to explicitly name the values of props inside your function parameters:
+
+```javascript
+function Header({ title }) {
+    console.log(title) // "React 💙"
+//  return <h1>React 💙</h1>
+// }
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
+
+Then you can replace the content of the 'h1' tag with your title variable.
+
+```javascript
+function Header({ title }) {
+  console.log(title)
+  return <h1>title</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```

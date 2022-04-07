@@ -10,9 +10,9 @@
     <script type="text/babel">
         const app = document.getElementById('app')
 
-        function Header(props) {
-            console.log(props) // { title: "React 💙" }
-            return <h1>React 💙</h1>
+        function Header({ title }) {
+            console.log(title)
+            return <h1>title</h1>
         }
 
         function HomePage() {
