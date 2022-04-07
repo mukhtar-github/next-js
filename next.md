@@ -395,3 +395,22 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+Your component now accepts a generic title prop which you can reuse in different parts of your application. All you need to do is change the title:
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  return (
+    <div>
+        <Header title="React 💙" />
+        <Header title="A new title" />
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
