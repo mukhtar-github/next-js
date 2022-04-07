@@ -465,3 +465,28 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+Notice how you’ve used curly braces to weave in and out of "JavaScript" and "JSX" land. If you run this code, React will give us a warning about a missing 'key' prop. This is because React needs something to uniquely identify items in an array so it knows which elements to update in the DOM. You can use the names for now since they are currently unique, but it's recommended to use something guaranteed to be unique, like an item ID.
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+        <ul>
+            {names.map(name => (
+                <li key={name}>{name}</li>
+            ))}
+        </ul>
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
