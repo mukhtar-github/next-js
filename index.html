@@ -10,16 +10,8 @@
     <script type="text/babel">
         const app = document.getElementById('app')
 
-        function createTitle(title) {
-            if (title) {
-                return title
-            } else {
-                return 'Default title'
-            }
-        }
-
         function Header({ title }) {
-            return <h1>{createTitle(title)}</h1>
+            return <h1>{title ? title : 'Default Title'}</h1>
         }
 
         function HomePage() {

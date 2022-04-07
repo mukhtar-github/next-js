@@ -358,3 +358,21 @@ function Header({ title }) {
 
 // ReactDOM.render(<HomePage />, app)
 ```
+
+#### And ternary operators
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default Title'}</h1>
+}
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <Header title="React 💙" />
+//     </div>
+//   )
+// }
+
+// ReactDOM.render(<HomePage />, app)
+```
