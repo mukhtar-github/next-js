@@ -414,3 +414,29 @@ function HomePage() {
 
 ReactDOM.render(<HomePage />, app)
 ```
+
+#### Iterating through lists
+
+It’s common to have data that you need to show as a list. You can use array methods to manipulate your data and generate UI elements that are identical in style but hold different pieces of information.
+
+Note: React is unopinionated when it comes to data fetching, meaning you can choose whichever solution best suits your needs. Later on, we’ll discuss data fetching options in Next.js. But for now, you can use a simple array to represent data.
+
+Add an array of names to your HomePage component:
+
+```javascript
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+    </div>
+  )
+}
+
+ReactDOM.render(<HomePage />, app)
+```
