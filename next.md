@@ -631,3 +631,40 @@ Note: Unlike *props* which are passed to components as the first function parame
 ### Getting Started with Next.js
 
 To add Next.js to your project, you can install these packages locally using the Node Package Manager 'npm'. To do so, create a new file called 'package.json' with an empty object '{}'. In your terminal, run 'npm install react react-dom next'. Once the installation is complete, you should be able to see your project dependencies listed inside your 'package.json' file.
+
+So you should change the file type from '.html' to '.js', and your code should now look like this:
+
+```javascript
+import { useState } from 'react'
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+  const [likes, setLikes] = useState(0)
+
+  function handleClick() {
+    setLikes(likes + 1)
+  }
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map(name => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <button onClick={handleClick}>Like ({likes})</button>
+    </div>
+  )
+}
+```
+
+Now, there are three more things you need to do to fully transition to a 'Next.js' app:
+
+- Move the index.js file to a new folder called pages (more on this later).
+- Add default export to your main React component to help 'Next.js' distinguish which component to render as the main component of this page.
