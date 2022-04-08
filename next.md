@@ -687,3 +687,11 @@ export default function HomePage() {}
     }
 }
 ```
+
+#### Running the development server
+
+To confirm everything works, you can view your app by running 'npm run dev' inside your terminal and navigating to 'localhost:3000' in the browser. Then, make a small change to the code and save it.
+
+React is a library that provides essential primitives for building modern interactive UI. But there is still some work involved to combine that UI you create into an application.
+
+Looking at the migration, you may already be getting a sense of the benefits of using Next.js. You removed the babel script, a taste of the complex tooling configuration you no longer have to think about. You also saw Fast Refresh in action, just one of the many developer experience features you can expect with Next.js.
