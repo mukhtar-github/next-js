@@ -668,3 +668,9 @@ Now, there are three more things you need to do to fully transition to a 'Next.j
 
 - Move the index.js file to a new folder called pages (more on this later).
 - Add default export to your main React component to help 'Next.js' distinguish which component to render as the main component of this page.
+
+```javascript
+export default function HomePage() {}
+```
+
+- Add a script to your 'package.json' file to run the 'Next.js' development server while you develop.
