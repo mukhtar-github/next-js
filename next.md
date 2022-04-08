@@ -674,3 +674,16 @@ export default function HomePage() {}
 ```
 
 - Add a script to your 'package.json' file to run the 'Next.js' development server while you develop.
+
+```javascript
+{
+    "scripts": {
+        "dev": "next dev"
+    },
+    "dependencies": {
+        "next": "^12.1.4",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    }
+}
+```
