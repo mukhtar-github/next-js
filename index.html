@@ -1,42 +1,27 @@
 <!-- index.html -->
-<html>
-  <body>
-    <div id="app"></div>
+import { useState } from "react"
 
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+function Header({ title }) {
+    return <h1>{title ? title : 'Default Title'}</h1>
+}
 
-    <script type="text/babel">
-        const app = document.getElementById('app')
+function HomePage() {
+    const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+    const [likes, setLikes] = useState(0)
 
-        function Header({ title }) {
-            return <h1>{title ? title : 'Default Title'}</h1>
-        }
+    const handleClick = () => {
+        setLikes(likes + 1)
+    }
 
-        function HomePage() {
-            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
-            const [likes, setLikes] = React.useState(0)
-
-            const handleClick = () => {
-                setLikes(likes + 1)
-            }
-
-            return (
-                <div>
-                    <Header title="Develop. Preview. Ship. 🚀" />
-                    <ul>
-                        {names.map(name => (
-                            <li key={name}>{name}</li>
-                        ))}
-                    </ul>
-                    <button onClick={handleClick}>Like ({likes})</button>
-                </div>
-            )
-        }
-
-        ReactDOM.render(<HomePage />, app)
-    </script>
-
-  </body>
-</html>
+    return (
+        <div>
+            <Header title="Develop. Preview. Ship. 🚀" />
+            <ul>
+                {names.map(name => (
+                    <li key={name}>{name}</li>
+                ))}
+            </ul>
+            <button onClick={handleClick}>Like ({likes})</button>
+        </div>
+    )
+}

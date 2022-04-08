@@ -630,4 +630,4 @@ Note: Unlike *props* which are passed to components as the first function parame
 
 ### Getting Started with Next.js
 
-To add Next.js to your project, you can install these packages locally using the Node Package Manager 'npm'. To do so, create a new file called 'package.json' with an empty object '{}'.
+To add Next.js to your project, you can install these packages locally using the Node Package Manager 'npm'. To do so, create a new file called 'package.json' with an empty object '{}'. In your terminal, run 'npm install react react-dom next'. Once the installation is complete, you should be able to see your project dependencies listed inside your 'package.json' file.
